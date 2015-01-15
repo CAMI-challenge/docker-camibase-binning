@@ -2,7 +2,7 @@ FROM cami/interface
 
 # add interface definition
 COPY dockermount.conf /dckr/etc/
-COPY list-spec.sh /dckr/etc/--list-spec
+COPY list-spec.sh /dckr/etc/tasks.d/--list-spec
 
 # Folder optionally containing all data uploaded by the user
 ENV DCKR_USERREF $DCKR_MNT/userref
