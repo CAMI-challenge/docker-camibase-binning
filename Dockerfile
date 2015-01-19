@@ -8,16 +8,16 @@ COPY list-spec.sh /dckr/etc/tasks.d/--list-spec
 ENV DCKR_USERREF $DCKR_MNT/userref
 
 # This variable MUST specify the absolute path, inside the container, of a gzipped FASTQ file
-ENV CONT_FASTQ_FILE $DCKR_MNT/input/sample.fq
+ENV CONT_FASTQ_FILE $DCKR_MNT/input/sample.fq.gz
 
 # This variable MUST specify the absolute path, inside the container, of a file containing the absolute paths of gzipped FASTQ files.
-ENV CONT_FASTQ_FILE_LISTING $DCKR_MNT/input/sample.fq.list
+ENV CONT_FASTQ_FILE_LISTING $DCKR_MNT/input/sample.fq.gz.list
 
 # This variable MUST specify the absolute path, inside the container, of a gzipped FASTQ file
-ENV CONT_PAIRED_FASTQ_FILE $DCKR_MNT/input/sample.interleaved.fq
+ENV CONT_PAIRED_FASTQ_FILE $DCKR_MNT/input/sample.interleaved.fq.gz
 
 # This variable MUST specify the absolute path, inside the container, of a file containing the absolute paths of gzipped FASTQ files
-ENV CONT_PAIRED_FASTQ_FILE_LISTING $DCKR_MNT/input/sample.interleaved.fq.list
+ENV CONT_PAIRED_FASTQ_FILE_LISTING $DCKR_MNT/input/sample.interleaved.fq.gz.list
 
 # This varaible specifies the absolute path of where the FASTA file containing the contigs can be found
 ENV CONT_CONTIGS_FILE $DCKR_MNT/input/contigs.fna
